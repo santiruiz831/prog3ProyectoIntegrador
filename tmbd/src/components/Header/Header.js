@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import Formulario from "../Formulario/Formulario";
+import "./header.css"
 
 class Header extends Component{
 constructor(props){
@@ -10,8 +12,9 @@ constructor(props){
 
 render(){
     return(
-        <div className="container">
-           
+        <div className="header-container">
+            <Formulario/>
+           <img src="../persona.jpg"></img>
         </div>
     )
 }

@@ -1,11 +1,26 @@
 .container {
     padding: 20px;
+    background-color: greenyellow;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 580px;
    
 }
+
+.todo {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
 .pre-ver-mas img {
     max-width: 100px;
 
 }
 .pre-ver-mas p {
-    width: 20px;
+    width: 250px;
 }

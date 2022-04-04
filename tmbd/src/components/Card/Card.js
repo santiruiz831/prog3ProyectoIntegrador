@@ -11,6 +11,7 @@ constructor(props){
 
 render(){
     return(
+        <section className="todo">
         <div className="container">
             
             <div className="pre-ver-mas">
@@ -26,6 +27,7 @@ render(){
                 <button onClick={ ()=> this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
            </div>
         </div>
+        </section>
     )
 }
 
