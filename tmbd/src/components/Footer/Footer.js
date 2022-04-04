@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./Footer.css"
 
 class Footer extends Component{
 constructor(props){
@@ -10,7 +11,7 @@ constructor(props){
 
 render(){
     return(
-        <div className="container">
+        <div className="footer-container">
            <img src="../facebook.png"></img>
            <img src="../instagram.png"></img>
            <img src="../twitter.png"></img>
