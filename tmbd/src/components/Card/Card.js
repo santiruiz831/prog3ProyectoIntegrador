@@ -12,14 +12,19 @@ constructor(props){
 render(){
     return(
         <div className="container">
-            <h3>{this.props.dataPelis.title}</h3>
-            <img src={this.state.link + this.props.dataPelis.poster_path} alt={this.props.dataPelis.title} />
-            <p>Descripcion: {this.props.dataPelis.overview}</p>
-            <p onClick={ ()=> this.props.verMas(this.props.dataPelis.id)}>Ver Más</p>
-                <p>Rating: {this.props.dataPelis.vote_average}</p>
-                <p>Estreno: {this.props.dataPelis.release_date}</p>
-                <p>Popularidad: {this.props.dataPelis.popularity}</p>
-            <button onClick={ ()=> this.props.borrarPelicula(this.props.dataPelis.id)}>Borrar</button>
+            
+            <div className="pre-ver-mas">
+                <h3>{this.props.dataPelis.title}</h3>
+                <img src={this.state.link + this.props.dataPelis.poster_path} alt={this.props.dataPelis.title} />
+                <p>Descripcion: {this.props.dataPelis.overview}</p>
+            </div>
+            <div className="post-ver-mas">
+                <p onClick={ ()=> this.props.verMas(this.props.dataPelis.id)}>Ver Más</p>
+                    <p>Rating: {this.props.dataPelis.vote_average}</p>
+                    <p>Estreno: {this.props.dataPelis.release_date}</p>
+                    <p>Popularidad: {this.props.dataPelis.popularity}</p>
+                <button onClick={ ()=> this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
+           </div>
         </div>
     )
 }

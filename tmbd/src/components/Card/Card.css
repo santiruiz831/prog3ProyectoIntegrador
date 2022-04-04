@@ -1,11 +1,11 @@
-.footer-container {
-    background-color: rgb(206, 197, 197);
-    margin-top: 60px;
+.container {
+    padding: 20px;
+   
 }
-.footer-container img {
-    width: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 50px;
+.pre-ver-mas img {
+    max-width: 100px;
 
+}
+.pre-ver-mas p {
+    width: 20px;
 }
