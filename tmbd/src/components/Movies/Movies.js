@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "../Card/Card";
-import Filter from "../Filter/Filter";
+import Header from '../Header/Header'
+import './movies.css'
 
 
 class Movies extends Component {
@@ -8,17 +9,19 @@ class Movies extends Component {
     super(props);
     this.state = {
         peliculas: [],
-        next: "https://api.themoviedb.org/3/movie/upcoming?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page=1",
+        next: 1,
+
     };
   }
 
   componentDidMount() {
-    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page=1"; //Definir que URL le vamos a pasar
+    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page="+this.state.next; //Definir que URL le vamos a pasar
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.setState(
           {
               peliculas: data.results,
+              next: this.state.next++,
           
 
           }
@@ -27,13 +30,13 @@ class Movies extends Component {
   }
 
   verMas(){
-    let url = this.state.next
+    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page="+this.state.next
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.setState(
         {
           peliculas: this.state.peliculas.concat(data.results),
-          next: data.info.next,
+          next: this.state.next++
         }
       ))
       .catch((error) => console.log(error));
@@ -61,9 +64,9 @@ class Movies extends Component {
     console.log(this.state.peliculas)
     return(
       <React.Fragment> 
-      <Filter filtrarPeliculas ={(textoAFiltrar)=>this.filtrarPeliculas(textoAFiltrar)}/>
+      <Header />
         <button type="button" onClick={()=> this.verMas ()} > Pedir más</button>
-        <section>
+        <section className="card-container">
             {
                 this.state.peliculas.length === 0 ?
                 <p>Cargando...</p> :
