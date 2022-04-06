@@ -10,6 +10,7 @@ class Movies extends Component {
     this.state = {
         peliculas: [],
         next: 1,
+        peliculaOrdenada: "peliculaColumna",
 
     };
   }
@@ -60,12 +61,31 @@ class Movies extends Component {
     })
   }
 
+  filas() {
+    this.setState ({
+        peliculaOrdenada: "peliculaFila"
+    })
+}
+
+columnas() {
+    this.setState ({
+        peliculaOrdenada: "peliculaColumna"
+    })
+}
+
   render() {
     console.log(this.state.peliculas)
     return(
       <React.Fragment> 
       <Header />
-        <button type="button" onClick={()=> this.verMas ()} > Pedir más</button>
+
+        <button className="pedir-mas" type="button" onClick={()=> this.verMas ()} > Pedir más</button>
+        
+        <div className = "orden">
+                    <i className="fa-regular fa-table-cells" onClick={() => this.columnas()}/>
+                    <i className="fas fa-align-justify" onClick={() => this.filas()}/>
+        </div>
+
         <section className="card-container">
             {
                 this.state.peliculas.length === 0 ?

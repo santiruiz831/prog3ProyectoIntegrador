@@ -5,3 +5,41 @@
     justify-content: space-around;
     align-items: stretch;
 }
+
+
+.pedir-mas {
+    margin-bottom: 15px;
+    display: flex !important;
+    justify-content: flex-end;
+}
+
+.peliculaFila{
+    margin-top: 20px;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(177, 169, 169);
+}
+
+.orden i{
+    margin-left: 2%;
+    cursor:pointer;
+    font-size: 23px;
+    color: rgb(233, 229, 223);
+}
+.orden i:hover{
+    box-shadow: 0rem 0rem 4px 3px rgba(18, 18, 19, 0.89);
+}
+.orden{
+    width: 100%;
+    background-color: rgb(27, 27, 43);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding-right: 3%;
+    padding-bottom: 1%;
+}

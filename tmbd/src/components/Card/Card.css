@@ -5,15 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 580px;
-}
-
-.todo {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: space-around;
-    align-items: stretch;
+    height: 590px;
 }
 
 .pre-ver-mas img {
@@ -21,6 +13,6 @@
 
 }
 .pre-ver-mas p {
-    width: 250px;
+    width: 410px;
     font-size: 15px;
 }

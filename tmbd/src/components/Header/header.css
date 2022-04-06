@@ -1,4 +1,14 @@
 .header-container {
-    background-color: rgb(15, 15, 15);
+    background-color: green;
     margin-bottom: 20px;
+    justify-content: space-around;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.buscador {
+    margin-top: 20px;
 }
