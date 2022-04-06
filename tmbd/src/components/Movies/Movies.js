@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Card/Card";
+import Filter from "../Filter/Filter";
 
 
 class Movies extends Component {
@@ -59,7 +60,8 @@ class Movies extends Component {
   render() {
     console.log(this.state.peliculas)
     return(
-      <React.Fragment>
+      <React.Fragment> 
+      <Filter filtrarPeliculas ={(textoAFiltrar)=>this.filtrarPeliculas(textoAFiltrar)}/>
         <button type="button" onClick={()=> this.verMas ()} > Pedir más</button>
         <section>
             {

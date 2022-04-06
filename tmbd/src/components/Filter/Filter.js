@@ -11,7 +11,7 @@ class Filter extends Component {
         this.setState({
             value: datos.target.value
         },
-            () => this.props.filtrarPeliculas(this.state.value))
+        () => this.props.filtrarPeliculas(this.state.value))
     }
 
     render() {

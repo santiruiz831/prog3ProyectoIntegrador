@@ -16,7 +16,7 @@ class Formulario extends Component {
         this.setState({
             value: datos.target.value
         },
-            () => console.log(this.state.value))
+        () => console.log(this.state.value))
     }
     render() {
         return (
