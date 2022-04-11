@@ -11,6 +11,7 @@ class Movies extends Component {
         peliculas: [],
         next: 1,
         peliculaOrdenada: "peliculaColumna",
+        peliculasYaFiltradas: [],
 
     };
   }
@@ -23,6 +24,7 @@ class Movies extends Component {
           {
               peliculas: data.results,
               next: this.state.next++,
+              peliculasYaFiltradas: data.results
           
 
           }
@@ -37,17 +39,19 @@ class Movies extends Component {
       .then((data) => this.setState(
         {
           peliculas: this.state.peliculas.concat(data.results),
+          peliculasYaFiltradas:this.state.peliculas.concat(data.results),
           next: this.state.next++
         }
       ))
       .catch((error) => console.log(error));
   }
 
-  filtrarPeliculas(textoAFiltrar) {
+  filtrarPeliculas(textoAFiltrar){
     let peliculasFiltradas = [];
-    peliculasFiltradas = this.state.peliculas.filter(unaPelicula => unaPelicula.name.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+    peliculasFiltradas = this.state.peliculas.filter( unaPelicula => unaPelicula.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+    
     this.setState({
-      peliculas: peliculasFiltradas
+      peliculasYaFiltradas: peliculasFiltradas
     })
 
   }
@@ -77,20 +81,23 @@ columnas() {
     console.log(this.state.peliculas)
     return(
       <React.Fragment> 
-      <Header />
-
+      <Header filtrarPeliculas={(textoAFiltrar)=>this.filtrarPeliculas(textoAFiltrar)}/>
         <button className="pedir-mas" type="button" onClick={()=> this.verMas ()} > Pedir más</button>
         
         <div className = "orden">
-                    <i className="fa-regular fa-table-cells" onClick={() => this.columnas()}/>
-                    <i className="fas fa-align-justify" onClick={() => this.filas()}/>
+          <i className="fas fa-th" onClick={() => this.columnas()}/>
+          <i className="fas fa-align-justify" onClick={() => this.filas()}/>
         </div>
 
-        <section className="card-container">
+        <section className={`card-container ${this.state.peliculaOrdenada ==  "peliculaColumna" ?
+        "peliculaColumna" :
+        "peliculaFila"}`}>
             {
                 this.state.peliculas.length === 0 ?
                 <p>Cargando...</p> :
-                this.state.peliculas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} />)
+                this.state.peliculasYaFiltradas.length === 0 ?
+                <p>No hay datos que coincidan con su busqueda</p> :
+                this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} />)
             }
         </section>
       </React.Fragment>

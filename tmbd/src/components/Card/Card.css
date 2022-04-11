@@ -16,3 +16,11 @@
     width: 410px;
     font-size: 15px;
 }
+
+.aditional-info {
+    display: none;
+}
+
+.aditional-info-show{
+    display: block;
+}

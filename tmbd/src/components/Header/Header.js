@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Filter from "../Filter/Filter";
 import "./header.css"
 
 class Header extends Component{
@@ -14,7 +13,6 @@ class Header extends Component{
         this.setState({
             value: datos.target.value
         },
-        
         ()=>this.props.filtrarPeliculas(this.state.value))
     }
 
@@ -28,13 +26,11 @@ class Header extends Component{
         return(
             <div className="header-container">
 
-                <h4>Nombre de la pagina</h4>
-
-                <form onSubmit={(event) => this.evitarDefault(event)}>
-                <input className="buscador" onChange={(datos) => this.capturarDatos(datos)} type='text' name="usuario" placeholder='ingrese pelicula' value={this.state.value}></input>
-                </form>
-                
-
+                <h4>Nombre de la pagina</h4>  
+                <form>
+                    <input onChange={(datos)=>this.capturarDatos(datos)} type="text" value={this.state.value} />
+                </form>    
+            
             </div>
         )
     }
