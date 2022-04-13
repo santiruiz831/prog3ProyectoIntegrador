@@ -61,7 +61,7 @@ class Movies extends Component {
     peliculasFiltradas = this.state.peliculas.filter(unaPelicula => unaPelicula.id !== id);
 
     this.setState ({
-      peliculas: peliculasFiltradas
+      peliculasYaFiltradas: peliculasFiltradas
     })
   }
 

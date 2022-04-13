@@ -50,7 +50,7 @@ render(){
                 <button className="more" onClick={() => this.viewMore()}>
                     {this.state.text}
                 </button>
-                <button onClick={() => this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
+                <button clasName = "remove" onClick={() => this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
                
                 
         </div>
