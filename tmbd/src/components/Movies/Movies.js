@@ -12,6 +12,7 @@ class Movies extends Component {
         next: 1,
         peliculaOrdenada: "peliculaColumna",
         peliculasYaFiltradas: [],
+        display: 'row'
 
     };
   }
@@ -67,14 +68,30 @@ class Movies extends Component {
 
   filas() {
     this.setState ({
-        peliculaOrdenada: "peliculaFila"
+        peliculaOrdenada: "row"
     })
 }
 
 columnas() {
     this.setState ({
-        peliculaOrdenada: "peliculaColumna"
+        peliculaOrdenada: "column"
     })
+}
+
+changeDisplay(){
+  if (this.state.display === 'row') {
+    this.setState({
+      display: 'column',
+    },
+    () => console.log(this.state.display)
+    )
+  } else {
+    this.setState({
+      display: 'row',
+    },
+    () => console.log(this.state.display)
+    )
+  }
 }
 
   render() {
@@ -89,15 +106,13 @@ columnas() {
           <i className="fas fa-align-justify" onClick={() => this.filas()}/>
         </div>
 
-        <section className={`card-container ${this.state.peliculaOrdenada ==  "peliculaColumna" ?
-        "peliculaColumna" :
-        "peliculaFila"}`}>
+        <section className={this.state.display === 'row' ? 'card-container-row': 'card-container-column'}>
             {
                 this.state.peliculas.length === 0 ?
                 <p>Cargando...</p> :
                 this.state.peliculasYaFiltradas.length === 0 ?
                 <p>No hay datos que coincidan con su busqueda</p> :
-                this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} />)
+                this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} display={this.state.display} />)
             }
         </section>
       </React.Fragment>

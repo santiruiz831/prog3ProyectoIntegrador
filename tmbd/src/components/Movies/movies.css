@@ -13,13 +13,24 @@
     justify-content: flex-end;
 }
 
-.peliculaFila{
+.row{
     margin-top: 20px;
     padding: 0%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: rgb(177, 169, 169);
+}
+
+.column{
+    margin-top: 20px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
     color: rgb(177, 169, 169);
 }
@@ -43,14 +54,5 @@
     padding-bottom: 1%;
 }
 
-.peliculaFila{
-    margin-top: 20px;
-    padding: 0%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    color: rgb(177, 169, 169);
-}
+
 
