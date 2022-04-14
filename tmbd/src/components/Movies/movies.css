@@ -27,8 +27,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    gap: 20px;
+    /* align-items: flex-end;
     flex-direction: row-reverse;
     padding-right: 3%;
-    padding-bottom: 1%;
+    padding-bottom: 1%; */
 }

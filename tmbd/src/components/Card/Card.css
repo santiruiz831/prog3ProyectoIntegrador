@@ -29,15 +29,16 @@
 
 /* vertical */
 .peliculaColumna {
+    color: white;
     height: auto;
-    width: 95%;
+    width: 23%;
     box-sizing: border-box;
     background-color: rgb(15, 15, 15);
     font-family: Arial, Helvetica, sans-serif;
-    margin: auto;
+
     border-radius: 15px;
-    padding: 1%;
-    margin-bottom: 3%;
+    padding: 10px;
+    margin: 2px;
     background-color: rgb(15, 15, 15);
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +46,7 @@
 }
 
 .peliculaColumna img {
-    width: 17%;
+   width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0rem 0rem 6px 6px rgb(31, 34, 41);
@@ -79,26 +80,27 @@
 
 .peliculaFila {
     display: flex;
-    flex-direction: column;
-    height: auto;
+    color: white;
+   gap: 10px;
     width: 100%;
     box-sizing: border-box;
     background-color: rgb(15, 15, 15);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 4%;
+    margin: 5px;
     border-radius: 15px;
     padding: 1%;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: left;
+   
     margin-top: 20px;
 }
 
-
+.peliculaFila h3{
+    padding-right: 30px;
+}
 .peliculaFila img {
-    width: 100%;
-    height: auto;
+  width: 15%;
     border-radius: 10px;
-    margin-bottom: 3%;
+   
     box-shadow: 0rem 0rem 6px 6px rgb(31, 34, 41);
 }
 

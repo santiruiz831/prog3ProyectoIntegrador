@@ -26,7 +26,7 @@ class Header extends Component{
         return(
             <div className="header-container">
 
-                <h4>Nombre de la pagina</h4>  
+                <h4>Pochoclip 📽🍿</h4>  
                 <form>
                     <input onChange={(datos)=>this.capturarDatos(datos)} type="text" value={this.state.value} />
                 </form>    

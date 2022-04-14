@@ -17,7 +17,7 @@ class Movies extends Component {
   }
 
   componentDidMount() {
-    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page="+this.state.next; //Definir que URL le vamos a pasar
+    let url = "https://api.themoviedb.org/3/movie/popular?api_key=e8659a3dae8d207d31ba4797c06188c8&language=en-US&page="+this.state.next;
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.setState(
@@ -89,15 +89,13 @@ columnas() {
           <i className="fas fa-align-justify" onClick={() => this.filas()}/>
         </div>
 
-        <section className={`card-container ${this.state.peliculaOrdenada ==  "peliculaColumna" ?
-        "peliculaColumna" :
-        "peliculaFila"}`}>
+        <section className={`card-container`}>
             {
                 this.state.peliculas.length === 0 ?
                 <p>Cargando...</p> :
                 this.state.peliculasYaFiltradas.length === 0 ?
                 <p>No hay datos que coincidan con su busqueda</p> :
-                this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} />)
+                this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} cardClassName={this.state.peliculaOrdenada} />)
             }
         </section>
       </React.Fragment>
