@@ -26,8 +26,8 @@ class Header extends Component{
         return(
             <div className="header-container">
 
-                <h4>Pochoclip 📽🍿</h4>  
-                <form>
+                <h4>POCHOCLIP 📽🍿</h4>  
+                <form className="buscador">
                     <input onChange={(datos)=>this.capturarDatos(datos)} type="text" value={this.state.value} />
                 </form>    
             

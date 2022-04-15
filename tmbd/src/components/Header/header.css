@@ -1,5 +1,5 @@
 .header-container {
-    background-color: green;
+    background-color: #263238;
     margin-bottom: 20px;
     justify-content: space-around;
     display: flex !important;
@@ -10,5 +10,16 @@
 }
 
 .buscador {
-    margin-top: 20px;
+    margin-top: 2%;
+}
+
+.header-container h4 {
+    font-family: sans-serif; 
+    font-size: 250%;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    color: #F4511E;
+
 }
