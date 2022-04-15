@@ -97,10 +97,10 @@
 .peliculaFila h3{
     padding-right: 30px;
 }
+
 .peliculaFila img {
-  width: 15%;
+    width: 15%;
     border-radius: 10px;
-   
     box-shadow: 0rem 0rem 6px 6px rgb(31, 34, 41);
 }
 
