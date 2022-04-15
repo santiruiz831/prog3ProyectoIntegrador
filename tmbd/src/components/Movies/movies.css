@@ -6,30 +6,36 @@
     align-items: stretch;
 }
 
-
 .pedir-mas {
     margin-bottom: 15px;
     display: flex !important;
     justify-content: flex-end;
+    background-color: #F4511E;
+    border-style: double;
 }
-
 
 .orden i{
     margin-left: 2%;
     cursor:pointer;
     font-size: 23px;
     color: rgb(233, 229, 223);
+    display: flex;
+    color: #F4511E;
+    align-items: flex-end;
+    flex-direction: row-reverse;
 }
+
 .orden i:hover{
     box-shadow: 0rem 0rem 4px 3px rgba(18, 18, 19, 0.89);
 }
+
 .orden{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    /* align-items: flex-end;
+    align-items: flex-end;
     flex-direction: row-reverse;
     padding-right: 3%;
-    padding-bottom: 1%; */
+    padding-bottom: 1%;
 }

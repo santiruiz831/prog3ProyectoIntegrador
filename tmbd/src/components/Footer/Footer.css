@@ -11,8 +11,26 @@
     margin-right: 8px;
 }
 
+.footer-container img {
+   margin-left: 20px;
+   margin-right: 20px;
+    
+}
+
+.footer-container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .footer-container ul li {
-    color: white
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    
 }
 
 .footer-container p {
