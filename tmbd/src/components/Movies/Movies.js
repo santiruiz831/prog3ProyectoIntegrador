@@ -61,7 +61,8 @@ class Movies extends Component {
     peliculasFiltradas = this.state.peliculas.filter(unaPelicula => unaPelicula.id !== id);
 
     this.setState ({
-      peliculasYaFiltradas: peliculasFiltradas
+      peliculasYaFiltradas: peliculasFiltradas,
+      peliculas:peliculasFiltradas
     })
   }
 
@@ -94,7 +95,7 @@ columnas() {
                 this.state.peliculas.length === 0 ?
                 <p>Cargando...</p> :
                 this.state.peliculasYaFiltradas.length === 0 ?
-                <p>No hay datos que coincidan con su busqueda</p> :
+                <p>No hay datos que coincidan con su búsqueda</p> :
                 this.state.peliculasYaFiltradas.map((pelis, idx) => <Card key={pelis.title + idx} dataPelis={pelis} borrarPeliculas= {(id) => this.borrar(id)} cardClassName={this.state.peliculaOrdenada} />)
             }
         </section>
