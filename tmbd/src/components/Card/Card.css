@@ -108,3 +108,63 @@
     margin-left: 2%;
 }
 
+@media only screen and (max-width: 820px) {
+    
+    .peliculaColumna{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .peliculaColumna h3 {
+        font-size: 45px;
+        height: 0px;
+        margin-bottom: 0%;
+    }
+
+    .peliculaColumna img {
+        padding-top: 10%;
+
+    }
+
+    .peliculaColumna {
+        height: 1900px;
+        padding-bottom: 100px;
+    }
+
+    .peliculaColumna p {
+        font-size: 30px;
+    }
+
+    .remove {
+        font-size: 30px;
+        width: 150px;
+        height: 50px;
+    }
+   
+    .more {
+        font-size: 30px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .peliculaFila {
+        width: 820px;
+        margin-left: 0px;
+        height: 600px;
+    }
+
+    .peliculaFila h3 {
+        font-size: 30px;
+    }
+
+    .peliculaFila p {
+        font-size: 30px;
+    }
+
+    .peliculaFila img {
+        height: 500px;
+        width: 200px;
+    }
+}

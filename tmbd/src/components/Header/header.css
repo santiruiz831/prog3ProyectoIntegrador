@@ -22,3 +22,37 @@
     margin-right: 1%;
     color: #F4511E;
 }
+
+@media only screen and (max-width: 820px) {
+
+    .header-container {
+        width: 823px;
+    }
+    
+    .header-container h4 {
+        font-size: 45px;
+    }
+
+    .buscador {
+        padding-right: 20px;
+        width: 80px;
+       
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .header-container {
+        width: 749px;
+    }
+    
+    .header-container h4 {
+        font-size: 45px;
+    }
+
+    .buscador {
+        padding-right: 20px;
+        width: 80px;
+       
+    }
+}

@@ -62,7 +62,7 @@ class Movies extends Component {
 
     this.setState ({
       peliculasYaFiltradas: peliculasFiltradas,
-      peliculas:peliculasFiltradas
+      peliculas: peliculasFiltradas
     })
   }
 
