@@ -52,28 +52,7 @@
 
     .card-container{
         
-        width: 1650px;
+        width: 100%;
        
     }
-}
-
-@media only screen and (max-width: 375px) {
-
-    .pedir-mas {
-        font-size: 35px;
-    }
-    .orden {
-        width: 749px;
-    }
-    .orden i{
-        font-size: 38px;
-        margin-bottom: 20px;
-        margin-right: 15px;
-    }
-
-    .card-container{ 
-        width: 1650px;
-       
-    }
-
 }
