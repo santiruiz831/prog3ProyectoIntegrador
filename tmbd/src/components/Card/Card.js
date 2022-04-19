@@ -49,12 +49,8 @@ class Card extends Component {
         <button className="more" onClick={() => this.viewMore()}>
           {this.state.text}
         </button>
-        <button
-          clasName="remove"
-          onClick={() => this.props.borrarPeliculas(this.props.dataPelis.id)}
-        >
-          Borrar
-        </button>
+
+        <button className="remove" onClick={() => this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
       </div>
     );
   }

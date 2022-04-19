@@ -64,18 +64,18 @@
 @media only screen and (max-width: 375px) {
 
     .footer-container p {
-        font-size: 30px;
+        font-size: 13px;
         padding-bottom: 25px;
         
     }
     .footer-container {
-        width: 749px;
+        width: 375px;
     }
     .footer-container ul li {
-        font-size: 20px;
+        font-size: 8px;
     }
     
     .footer-container img {
-        width: 50px;
+        width: 20px;
     }
 }
