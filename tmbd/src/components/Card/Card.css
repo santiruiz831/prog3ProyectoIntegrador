@@ -27,7 +27,6 @@
     width: 100%;
 }
 
-/* vertical */
 .peliculaColumna {
     color: white;
     height: auto;
@@ -65,12 +64,14 @@
 
 
 .more {
-    width: 15%;
+    width: 55px;
+    height: 35px;
 }
 
 .remove {
-    width: 15%;
+    width: 55px;
     margin-top: 2%;
+    height: 30px;
 }
 
 .container:hover {

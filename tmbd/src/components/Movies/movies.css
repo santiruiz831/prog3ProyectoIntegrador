@@ -12,6 +12,9 @@
     justify-content: flex-end;
     background-color: #F4511E;
     border-style: double;
+    width: 90px;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 .orden i{
@@ -30,7 +33,7 @@
 }
 
 .orden{
-    width: 100%;
+    width: 1400px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
