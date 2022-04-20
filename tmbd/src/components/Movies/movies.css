@@ -58,6 +58,10 @@
         width: 820px;
        
     }
+
+    .orden {
+        width: 820px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
