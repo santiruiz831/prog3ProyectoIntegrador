@@ -46,6 +46,7 @@
 @media only screen and (max-width: 820px) {
     .pedir-mas {
         font-size: 28px;
+        width: 147px;
     }
     
     .orden i{
@@ -67,7 +68,7 @@
 @media only screen and (max-width: 375px) {
     .pedir-mas {
         font-size: 15px;
-        
+        width: 90px;
     }
     
     .orden i{
